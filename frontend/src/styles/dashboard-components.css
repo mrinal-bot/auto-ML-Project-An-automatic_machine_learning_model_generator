@@ -1,0 +1,698 @@
+/* ==========================================================================
+   MLForge AI - Dashboard Component Styles (iFraldas Design System)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. STATS GRID (4 CARDS)
+   -------------------------------------------------------------------------- */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.stat-card {
+  background: var(--neutral-white);
+  border: 1px solid var(--iris-100);
+  border-radius: var(--radius-lg);
+  padding: 1.35rem 1.25rem;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-fast);
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+}
+
+.stat-card:hover {
+  border-color: var(--iris-300);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.stat-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.stat-icon-wrapper {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid var(--iris-100);
+}
+
+.stat-card-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--neutral-700);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.stat-card-value {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--slate-default);
+  line-height: 1.1;
+  margin-bottom: 0.4rem;
+}
+
+.stat-card-subtitle {
+  font-size: 0.775rem;
+  color: var(--neutral-700);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.stat-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  font-size: 0.725rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: var(--radius-xsm);
+}
+
+.stat-pill.up {
+  background: var(--success-bg);
+  color: #15803d;
+}
+
+.stat-pill.neutral {
+  background: var(--marguerite-50);
+  color: var(--marguerite-600);
+}
+
+@media (max-width: 1200px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 580px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. CREATE NEW PROJECT HERO PROMINENT CARD
+   -------------------------------------------------------------------------- */
+.create-project-banner {
+  background: linear-gradient(135deg, var(--iris-50) 0%, var(--marguerite-50) 100%);
+  border: 1px solid var(--iris-200);
+  border-radius: var(--radius-lg);
+  padding: 2rem 2.25rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  box-shadow: var(--shadow-md);
+}
+
+.create-project-glow {
+  position: absolute;
+  top: -50px;
+  right: 15%;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(1, 182, 188, 0.18) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(40px);
+  pointer-events: none;
+}
+
+.create-project-text {
+  max-width: 650px;
+  position: relative;
+  z-index: 1;
+}
+
+.create-project-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--iris-700);
+  background: var(--neutral-white);
+  border: 1px solid var(--iris-200);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  margin-bottom: 0.75rem;
+}
+
+.create-project-heading {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--slate-default);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
+}
+
+.create-project-desc {
+  font-size: 0.95rem;
+  color: var(--neutral-700);
+  line-height: 1.5;
+}
+
+.create-project-action {
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.btn-create-highlight {
+  padding: 12px 18px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  background: var(--iris-default);
+  color: var(--neutral-white);
+  border: 1px solid var(--iris-default);
+  box-shadow: var(--shadow-sm);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.btn-create-highlight:hover {
+  background: var(--iris-600);
+  border-color: var(--iris-600);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-create-highlight:active {
+  background: var(--iris-700);
+  box-shadow: var(--shadow-sm);
+  transition: none;
+}
+
+@media (max-width: 860px) {
+  .create-project-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.75rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. QUICK ACTIONS (3 CARDS)
+   -------------------------------------------------------------------------- */
+.quick-actions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.quick-action-card {
+  background: var(--neutral-white);
+  border: 1px solid var(--iris-100);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.15rem;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  position: relative;
+  box-shadow: var(--shadow-sm);
+}
+
+.quick-action-card:hover {
+  border-color: var(--iris-300);
+  background: var(--neutral-white);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.quick-action-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: var(--radius-md);
+  background: var(--iris-50);
+  border: 1px solid var(--iris-200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--iris-default);
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
+}
+
+.quick-action-card:hover .quick-action-icon {
+  background: var(--iris-default);
+  color: var(--neutral-white);
+  box-shadow: var(--shadow-sm);
+  transform: scale(1.05);
+}
+
+.quick-action-info h4 {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--slate-default);
+  margin-bottom: 0.35rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.quick-action-info p {
+  font-size: 0.85rem;
+  color: var(--neutral-700);
+  line-height: 1.5;
+}
+
+/* --------------------------------------------------------------------------
+   4. TWO-COLUMN SPLIT: RECENT PROJECTS & RECENT ACTIVITY
+   -------------------------------------------------------------------------- */
+.dashboard-main-split {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.75rem;
+}
+
+/* Card Container standard */
+.dash-card {
+  background: var(--neutral-white);
+  border: 1px solid var(--iris-100);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+}
+
+.dash-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.dash-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--slate-default);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dash-card-link {
+  font-size: 0.825rem;
+  font-weight: 700;
+  color: var(--iris-default);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: color var(--transition-fast);
+}
+
+.dash-card-link:hover {
+  color: var(--iris-700);
+}
+
+/* --------------------------------------------------------------------------
+   5. RECENT PROJECTS TABLE
+   -------------------------------------------------------------------------- */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.projects-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.85rem;
+}
+
+.projects-table th {
+  padding: 0.75rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--neutral-700);
+  border-bottom: 1px solid var(--slate-200);
+  white-space: nowrap;
+}
+
+.projects-table td {
+  padding: 1rem 1rem;
+  border-bottom: 1px solid var(--slate-100);
+  color: var(--slate-default);
+  vertical-align: middle;
+}
+
+.projects-table tr:hover td {
+  background-color: var(--iris-50);
+}
+
+.project-name-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.project-name-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  background: var(--iris-50);
+  color: var(--iris-700);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.project-name-text {
+  font-weight: 700;
+  color: var(--slate-default);
+  font-size: 0.875rem;
+}
+
+.project-subtext {
+  font-size: 0.725rem;
+  color: var(--neutral-700);
+}
+
+/* Status Badges (iFraldas Badge Spec) */
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 4px 10px;
+  border-radius: var(--radius-xsm);
+  font-size: 0.75rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.status-pill.completed {
+  background: var(--success-bg);
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+}
+
+.status-pill.processing {
+  background: var(--iris-50);
+  color: var(--iris-700);
+  border: 1px solid var(--iris-200);
+}
+
+.status-pill.failed {
+  background: var(--error-50);
+  color: var(--error-600);
+  border: 1px solid var(--error-200);
+}
+
+.table-action-btn {
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.775rem;
+  font-weight: 700;
+  background: var(--neutral-white);
+  border: 1px solid var(--slate-200);
+  color: var(--slate-default);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.table-action-btn:hover {
+  border-color: var(--iris-default);
+  color: var(--iris-700);
+  background: var(--iris-50);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Table empty search state */
+.empty-table-state {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  color: var(--neutral-700);
+}
+
+/* --------------------------------------------------------------------------
+   6. RECENT ACTIVITY TIMELINE
+   -------------------------------------------------------------------------- */
+.activity-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  position: relative;
+  padding-left: 0.5rem;
+}
+
+.activity-item {
+  display: flex;
+  gap: 0.85rem;
+  position: relative;
+}
+
+.activity-connector {
+  position: absolute;
+  left: 14px;
+  top: 30px;
+  bottom: -15px;
+  width: 2px;
+  background: var(--slate-100);
+}
+
+.activity-item:last-child .activity-connector {
+  display: none;
+}
+
+.activity-icon-node {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.activity-icon-node.success {
+  background: var(--success-bg);
+  color: #15803d;
+  border: 1px solid #bbf7d0;
+}
+
+.activity-icon-node.info {
+  background: var(--iris-50);
+  color: var(--iris-700);
+  border: 1px solid var(--iris-200);
+}
+
+.activity-icon-node.processing {
+  background: var(--marguerite-50);
+  color: var(--marguerite-600);
+  border: 1px solid var(--marguerite-200);
+}
+
+.activity-icon-node.warning {
+  background: var(--yellow-100);
+  color: var(--yellow-700);
+  border: 1px solid var(--yellow-300);
+}
+
+.activity-icon-node.error {
+  background: var(--error-50);
+  color: var(--error-600);
+  border: 1px solid var(--error-200);
+}
+
+.activity-text {
+  flex: 1;
+}
+
+.activity-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.2rem;
+}
+
+.activity-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--slate-default);
+}
+
+.activity-time {
+  font-size: 0.725rem;
+  color: var(--slate-400);
+}
+
+.activity-desc {
+  font-size: 0.775rem;
+  color: var(--neutral-700);
+  line-height: 1.4;
+}
+
+/* --------------------------------------------------------------------------
+   7. USAGE OVERVIEW & GETTING STARTED CARDS
+   -------------------------------------------------------------------------- */
+.dashboard-bottom-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.75rem;
+}
+
+.usage-metric-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.usage-metric-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.825rem;
+}
+
+.usage-metric-title {
+  color: var(--neutral-700);
+}
+
+.usage-metric-value {
+  font-weight: 700;
+  color: var(--slate-default);
+}
+
+.usage-progress-bar {
+  width: 100%;
+  height: 8px;
+  background: var(--slate-200);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.usage-progress-fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  background: var(--iris-default);
+  transition: width 300ms ease;
+}
+
+.guide-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--slate-100);
+}
+
+.guide-step:last-child {
+  border-bottom: none;
+}
+
+.guide-step-num {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--iris-50);
+  border: 1px solid var(--iris-200);
+  color: var(--iris-700);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.guide-step-content h5 {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--slate-default);
+  margin-bottom: 0.15rem;
+}
+
+.guide-step-content p {
+  font-size: 0.775rem;
+  color: var(--neutral-700);
+  line-height: 1.4;
+}
+
+@media (max-width: 1024px) {
+  .dashboard-main-split {
+    grid-template-columns: 1fr;
+  }
+  .dashboard-bottom-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   8. PLACEHOLDER PAGES (DATASETS, RESULTS, REPORTS, SETTINGS, PROJECTS)
+   -------------------------------------------------------------------------- */
+.placeholder-view-card {
+  background: var(--neutral-white);
+  border: 1px solid var(--iris-100);
+  border-radius: var(--radius-lg);
+  padding: 3rem 2rem;
+  text-align: center;
+  max-width: 720px;
+  margin: 2rem auto;
+  box-shadow: var(--shadow-md);
+}
+
+.placeholder-view-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-lg);
+  background: var(--iris-default);
+  color: var(--neutral-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem auto;
+  box-shadow: var(--shadow-md);
+}
+
+.placeholder-view-card h2 {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--slate-default);
+  margin-bottom: 0.5rem;
+}
+
+.placeholder-view-card p {
+  color: var(--neutral-700);
+  font-size: 0.95rem;
+  max-width: 500px;
+  margin: 0 auto 1.75rem auto;
+  line-height: 1.5;
+}

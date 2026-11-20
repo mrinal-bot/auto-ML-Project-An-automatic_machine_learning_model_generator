@@ -1,0 +1,464 @@
+:root {
+  /* =========================================================
+     iFraldas Design System — Design Tokens
+     ========================================================= */
+
+  /* Iris Blue (Primary) */
+  --iris-50: #e6f8f9;
+  --iris-100: #ccf0f2;
+  --iris-200: #b3e9eb;
+  --iris-300: #99e2e4;
+  --iris-400: #80dbdd;
+  --iris-600: #019296;
+  --iris-700: #016d71;
+  --iris-800: #01474a;
+  --iris-900: #002425;
+  --iris-default: #01b6bc;
+
+  /* Blue Marguerite (Accent) */
+  --marguerite-50: #f0eef9;
+  --marguerite-100: #e2e1f6;
+  --marguerite-200: #d4d1f0;
+  --marguerite-300: #c6c3ea;
+  --marguerite-400: #b8b5e8;
+  --marguerite-600: #5953a8;
+  --marguerite-700: #3f3d7e;
+  --marguerite-800: #2c2a54;
+  --marguerite-900: #161428;
+  --marguerite-default: #6f69d2;
+
+  /* Slate (Neutral Text / Borders) */
+  --slate-50: #ebebee;
+  --slate-100: #d7d7dd;
+  --slate-200: #c3c3ca;
+  --slate-300: #afafba;
+  --slate-400: #9a9ba9;
+  --slate-600: #2b2d42;
+  --slate-700: #201f31;
+  --slate-800: #161621;
+  --slate-900: #0b0b10;
+  --slate-default: #363853;
+
+  /* Neutral (Backgrounds) */
+  --neutral-50: #fafbfc;
+  --neutral-100: #f7f8f9;
+  --neutral-200: #eff1f3;
+  --neutral-300: #eff1f3;
+  --neutral-400: #ebedf0;
+  --neutral-600: #adadb4;
+  --neutral-700: #828387;
+  --neutral-800: #565859;
+  --neutral-900: #2b2b2d;
+  --neutral-black: #000000;
+  --neutral-white: #ffffff;
+  --neutral-default: #d8dbe1;
+
+  /* Error */
+  --error-50: #ffe9f0;
+  --error-100: #ffd7de;
+  --error-200: #ffc4cf;
+  --error-300: #ffb0bd;
+  --error-400: #ff9dac;
+  --error-600: #cc2e48;
+  --error-700: #992237;
+  --error-800: #661726;
+  --error-900: #330b13;
+  --error-default: #ff395b;
+
+  /* Salmon Pink (Secondary) */
+  --salmon-50: #ffe8f6;
+  --salmon-100: #ffe8f6;
+  --salmon-200: #ffddee;
+  --salmon-300: #ffd1e6;
+  --salmon-400: #ffc6dd;
+  --salmon-600: #cc7081;
+  --salmon-700: #995561;
+  --salmon-800: #663a40;
+  --salmon-900: #331d20;
+  --salmon-default: #ff8da1;
+
+  /* Yellow (Warnings) */
+  --yellow-50: #fffbf0;
+  --yellow-100: #fff6e1;
+  --yellow-200: #fff0ca;
+  --yellow-300: #ffeab3;
+  --yellow-400: #ffe49c;
+  --yellow-500: #efb100;
+  --yellow-600: #b88600;
+  --yellow-700: #805c00;
+  --yellow-800: #483700;
+  --yellow-900: #241b00;
+
+  /* Semantic Success */
+  --success-default: #22c55e;
+  --success-bg: #f0fdf4;
+
+  /* Spacing */
+  --space-0: 0px;
+  --space-0-5: 2px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+
+  /* Border Radius */
+  --radius-xsm: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Border Width */
+  --border-xm: 1px;
+
+  /* Sombras */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.15);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.2);
+
+  /* Typography */
+  --font-sans: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Nunito', 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'Menlo', 'Monaco', 'Consolas', 'Courier New', monospace;
+
+  /* Transitions */
+  --transition-fast: 200ms ease;
+  --transition-normal: 300ms ease;
+
+  /* =========================================================
+     Aliased App Tokens -> Mapped to iFraldas Design System
+     ========================================================= */
+  --primary-blue: var(--iris-default);
+  --primary-violet: var(--marguerite-default);
+  --background: var(--neutral-50);
+  --sidebar-background: var(--neutral-white);
+  --card-background: var(--neutral-white);
+  --accent: var(--marguerite-default);
+  --text-primary: var(--slate-default);
+  --text-secondary: var(--neutral-700);
+  --border: var(--slate-200);
+
+  --color-primary: var(--iris-default);
+  --color-primary-rgb: 1, 182, 188;
+  --color-secondary: var(--marguerite-default);
+  --color-secondary-rgb: 111, 105, 210;
+  --color-bg-dark: var(--neutral-50);
+  --color-bg-darker: var(--neutral-100);
+  --color-sidebar-bg: var(--neutral-white);
+  --color-card-bg: var(--neutral-white);
+  --color-card-hover: var(--neutral-50);
+  --color-accent: var(--marguerite-default);
+  --color-accent-rgb: 111, 105, 210;
+  --color-text-primary: var(--slate-default);
+  --color-text-secondary: var(--neutral-700);
+  --color-text-muted: var(--slate-400);
+  --color-border: var(--slate-100);
+  --color-border-hover: var(--iris-300);
+
+  --gradient-primary: linear-gradient(135deg, var(--iris-default) 0%, var(--iris-600) 100%);
+  --gradient-hover: linear-gradient(135deg, var(--iris-600) 0%, var(--iris-700) 100%);
+  --gradient-accent-text: linear-gradient(135deg, var(--iris-default) 0%, var(--marguerite-default) 100%);
+  --gradient-glow: radial-gradient(circle at center, rgba(1, 182, 188, 0.12) 0%, rgba(111, 105, 210, 0.05) 50%, transparent 70%);
+
+  --shadow-glow: 0 4px 14px rgba(1, 182, 188, 0.2);
+  --shadow-glow-strong: 0 8px 20px rgba(1, 182, 188, 0.28);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: light;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 400;
+  background-color: var(--neutral-50);
+  color: var(--slate-default);
+  line-height: 1.5;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--slate-default);
+}
+
+h1 { font-size: clamp(1.75rem, 5vw, 3rem); }
+h2 { font-size: clamp(1.5rem, 4vw, 2.25rem); }
+h3 { font-size: clamp(1.25rem, 3.5vw, 1.875rem); }
+h4 { font-size: clamp(1rem, 2.5vw, 1.5rem); }
+h5 { font-size: clamp(1rem, 2vw, 1.25rem); }
+h6 { font-size: 1rem; }
+
+code, pre {
+  font-family: var(--font-mono);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: var(--font-sans);
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--iris-default);
+  outline-offset: 2px;
+  box-shadow: var(--shadow-md);
+}
+
+button:disabled,
+input:disabled,
+select:disabled,
+textarea:disabled {
+  background-color: var(--slate-50);
+  color: var(--slate-400);
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Background mesh & grid elements */
+.app-container {
+  min-height: 100vh;
+  position: relative;
+  background-color: var(--neutral-50);
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(1, 182, 188, 0.08), transparent 70%),
+    radial-gradient(circle at 90% 20%, rgba(111, 105, 210, 0.06), transparent 45%),
+    radial-gradient(circle at 10% 60%, rgba(255, 141, 161, 0.05), transparent 40%);
+}
+
+.bg-grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right, rgba(54, 56, 83, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(54, 56, 83, 0.03) 1px, transparent 1px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Global Container */
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Section Common Styling */
+.section-padding {
+  padding: 6.5rem 0;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 3.5rem auto;
+}
+
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.9rem;
+  background: var(--iris-50);
+  border: var(--border-xm) solid var(--iris-200);
+  border-radius: var(--radius-full);
+  color: var(--iris-700);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  color: var(--slate-default);
+  letter-spacing: -0.02em;
+}
+
+.section-subtitle {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  color: var(--neutral-700);
+  line-height: 1.5;
+}
+
+/* Gradient Text Helper */
+.text-gradient {
+  background: var(--gradient-accent-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* Standard Buttons (UButton Alignment) */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-sm {
+  font-size: 0.875rem;
+  padding: 8px 12px;
+}
+
+.btn-primary {
+  background: var(--iris-default);
+  color: var(--neutral-white);
+  box-shadow: var(--shadow-sm);
+  border: var(--border-xm) solid var(--iris-default);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: var(--iris-600);
+  border-color: var(--iris-600);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary:active:not(:disabled) {
+  background: var(--iris-700);
+  border-color: var(--iris-700);
+  box-shadow: var(--shadow-sm);
+  transition: none;
+}
+
+.btn-secondary {
+  background: var(--neutral-white);
+  color: var(--iris-default);
+  border: var(--border-xm) solid var(--iris-default);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: var(--iris-50);
+  border-color: var(--iris-600);
+  color: var(--iris-600);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-secondary:active:not(:disabled) {
+  background: var(--iris-100);
+  border-color: var(--iris-700);
+  color: var(--iris-700);
+  box-shadow: var(--shadow-sm);
+  transition: none;
+}
+
+/* Card Common Styling (iFraldas Card Spec) */
+.glass-card {
+  background: var(--neutral-white);
+  border: var(--border-xm) solid var(--iris-100);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-fast);
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-card:hover {
+  border-color: var(--iris-300);
+  background: var(--neutral-white);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+/* iFraldas Design System Component Helpers */
+.u-badge {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  border-radius: var(--radius-xsm);
+  font-size: 0.75rem;
+  line-height: 1;
+  padding: 4px 8px;
+}
+
+.u-badge-md {
+  font-size: 0.875rem;
+  padding: 6px 12px;
+}
+
+.u-spinner {
+  border-radius: 50%;
+  border: 3px solid var(--slate-200);
+  border-top-color: var(--iris-default);
+  animation: uSpin 1.4s linear infinite;
+}
+
+/* Animations */
+@keyframes uSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes flowDash {
+  to {
+    stroke-dashoffset: -24;
+  }
+}

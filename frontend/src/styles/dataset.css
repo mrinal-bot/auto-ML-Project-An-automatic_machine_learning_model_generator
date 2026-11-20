@@ -1,0 +1,294 @@
+/* ==========================================================================
+   MLForge AI - Phase 4: Dataset & ML Configuration Styles (iFraldas)
+   ========================================================================== */
+
+.create-project-container {
+  max-width: 1040px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Page Header & Back button */
+.create-project-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.create-project-title-group h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 800;
+  color: var(--slate-default);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.35rem;
+}
+
+.create-project-title-group p {
+  color: var(--neutral-700);
+  font-size: 0.925rem;
+  line-height: 1.5;
+}
+
+.back-to-dashboard-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--slate-default);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  background: var(--neutral-white);
+  border: 1px solid var(--slate-200);
+  transition: all var(--transition-fast);
+}
+
+.back-to-dashboard-btn:hover {
+  color: var(--iris-700);
+  border-color: var(--iris-default);
+  background: var(--iris-50);
+  box-shadow: var(--shadow-sm);
+}
+
+/* --------------------------------------------------------------------------
+   WORKFLOW STEPPER PROGRESS BAR
+   -------------------------------------------------------------------------- */
+.stepper-container {
+  background: var(--neutral-white);
+  border: 1px solid var(--iris-100);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.5rem;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow-x: auto;
+}
+
+.stepper-track {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 680px;
+  position: relative;
+}
+
+.step-node {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  color: var(--slate-400);
+}
+
+.step-node:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.step-circle {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--neutral-100);
+  border: 2px solid var(--slate-200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--neutral-700);
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.step-node.active .step-circle {
+  background: var(--iris-default);
+  border-color: var(--iris-default);
+  color: var(--neutral-white);
+  box-shadow: var(--shadow-md);
+}
+
+.step-node.completed .step-circle {
+  background: var(--success-bg);
+  border-color: var(--success-default);
+  color: #15803d;
+}
+
+.step-label-group {
+  text-align: left;
+}
+
+.step-num-text {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--slate-400);
+}
+
+.step-title-text {
+  font-size: 0.825rem;
+  font-weight: 700;
+  color: var(--neutral-700);
+  white-space: nowrap;
+}
+
+.step-node.active .step-title-text {
+  color: var(--iris-700);
+}
+
+.step-node.completed .step-title-text {
+  color: var(--slate-default);
+}
+
+.stepper-line {
+  flex: 1;
+  height: 2px;
+  background: var(--slate-200);
+  margin: 0 0.5rem;
+  transition: background-color var(--transition-normal);
+}
+
+.stepper-line.completed {
+  background: var(--iris-default);
+}
+
+/* Step Content Card */
+.step-card {
+  background: var(--neutral-white);
+  border: 1px solid var(--iris-100);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.step-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border-bottom: 1px solid var(--slate-100);
+  padding-bottom: 1.25rem;
+}
+
+.step-card-header-text h3 {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--slate-default);
+  letter-spacing: -0.01em;
+  margin-bottom: 0.25rem;
+}
+
+.step-card-header-text p {
+  color: var(--neutral-700);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.step-badge-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  background: var(--iris-50);
+  border: 1px solid var(--iris-200);
+  color: var(--iris-700);
+}
+
+/* Step Navigation Footer Controls */
+.step-footer-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--slate-100);
+}
+
+.btn-step-prev {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-weight: 700;
+  background: var(--neutral-white);
+  color: var(--iris-default);
+  border: 1px solid var(--iris-default);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-step-prev:hover:not(:disabled) {
+  background: var(--iris-50);
+  border-color: var(--iris-600);
+  color: var(--iris-600);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-step-prev:disabled {
+  background: var(--slate-50);
+  border-color: var(--slate-200);
+  color: var(--slate-400);
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-step-next {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 10px 18px;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-weight: 700;
+  background: var(--iris-default);
+  color: var(--neutral-white);
+  border: 1px solid var(--iris-default);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-step-next:hover:not(:disabled) {
+  background: var(--iris-600);
+  border-color: var(--iris-600);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-step-next:active:not(:disabled) {
+  background: var(--iris-700);
+  box-shadow: var(--shadow-sm);
+  transition: none;
+}
+
+.btn-step-next:disabled {
+  background: var(--slate-50);
+  border-color: var(--slate-200);
+  color: var(--slate-400);
+  opacity: 0.6;
+  cursor: not-allowed;
+}
